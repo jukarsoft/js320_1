@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>posicion raton</title>
+	<style type="text/css">
+		body {
+			height: 200px;
+			border: 2px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+		//evento  de tecla pulsada para el body
+		window.onload=function() {
+			
+			document.getElementsByTagName('body')[0].addEventListener('keypress', verTecla);
+			document.getElementsByTagName('body')[0].addEventListener('mouseup', raton);
+		}	
+
+		function raton(event) {
+			var codigoX= event.pageX;
+			var codigoY= event.pageY;
+			console.log(event)
+			alert(codigoX)
+			alert(codigoY)
+		}
+
+		function verTecla(event) {
+			var codigo= event.keyCode;
+			console.log(event)
+			alert(codigo)
+			//keycode
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
